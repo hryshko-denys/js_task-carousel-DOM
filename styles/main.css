@@ -51,6 +51,9 @@ h1 {
   .carousel__btn_prev {
     background: url(../images/slider-btn/prev-btn.png); }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: Lato, sans-serif; }
 
@@ -68,17 +71,22 @@ li {
 
 .wrapper {
   position: relative;
-  width: 310px;
-  margin: 0 auto; }
+  width: 315px;
+  margin: 100px auto; }
 
 .carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
+  .carousel__item:not(:last-child) {
+    margin-right: 5px;
+    -webkit-transition: margin-left 0.5s ease;
+    transition: margin-left 0.5s ease; }
   .carousel__btn {
     position: absolute;
-    top: calc(50% - 40px); }
+    top: calc(50% - 40px);
+    cursor: pointer; }
   .carousel__btn_prev {
     left: -60px; }
   .carousel__btn_next {
@@ -100,7 +108,9 @@ li {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #b1afb1; }
+    background-color: #b1afb1;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease; }
   .carousel__dot_active {
     background-color: #767476; }
 
